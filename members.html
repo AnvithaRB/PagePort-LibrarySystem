@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Library - Members</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Community Library</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="members.html" class="active">Members</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="loginSection">
+            <h2>Member Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Not a member? <a href="#" onclick="showRegisterForm()">Register here</a></p>
+        </section>
+
+        <section id="registerSection" style="display: none;">
+            <h2>New Member Registration</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name:</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regUsername">Username:</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already a member? <a href="#" onclick="showLoginForm()">Login here</a></p>
+        </section>
+
+        <section id="memberDashboard" style="display: none;">
+            <h2>Welcome, <span id="memberName"></span></h2>
+            <div class="member-actions">
+                <button onclick="viewBorrowedBooks()">View Borrowed Books</button>
+                <button onclick="viewReservedBooks()">View Reserved Books</button>
+                <button onclick="viewFines()">View Fines</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+            
+            <div id="borrowedBooks" class="member-section" style="display: none;">
+                <h3>Your Borrowed Books</h3>
+                <ul id="borrowedBooksList"></ul>
+            </div>
+            
+            <div id="reservedBooks" class="member-section" style="display: none;">
+                <h3>Your Reserved Books</h3>
+                <ul id="reservedBooksList"></ul>
+            </div>
+            
+            <div id="finesSection" class="member-section" style="display: none;">
+                <h3>Your Fines</h3>
+                <p id="finesAmount"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Community Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
