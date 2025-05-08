@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Library - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Community Library</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info">
+            <div>
+                <h3>Address</h3>
+                <p>Mahindra University<br>Hyderabad, TG 500043</p>
+            </div>
+            <div>
+                <h3>Hours</h3>
+                <p>Monday-Friday: 9am-8pm<br>Saturday: 10am-6pm<br>Sunday: 12pm-5pm</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Phone: (91) 91603 55587<br>Email: info@communitylibrary.org</p>
+            </div>
+        </div>
+        
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" required>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="contactSubject">Subject:</label>
+                <input type="text" id="contactSubject" required>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div id="contactSuccess" style="display: none;">
+            <h3>Thank you for your message!</h3>
+            <p>We'll get back to you as soon as possible.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Community Library.
